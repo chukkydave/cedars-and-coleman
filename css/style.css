@@ -94,7 +94,7 @@ select {
 	padding: 8px 15px;
 	width: 100%;
 	margin: 0 0 20px 0;
-	text-transform: uppercase;
+	text-transform: none;
 	max-width: 100%;
 	resize: none;
 }
@@ -1333,9 +1333,9 @@ nav .container {
 	top: 0px;
 	display: inline-table;
 }
-.logo {
+/* .logo {
 	max-width: 109px;
-}
+} */
 .logo-style-2 {
 	max-width: 177px;
 }
@@ -4794,7 +4794,7 @@ figure:hover img {
 	overflow: hidden;
 }
 .portfolio-short-description figure {
-	background: rgba(27, 22, 28, 0.9);
+	background: rgba(21, 44, 64, 0.9);
 	padding: 100px;
 	display: inline-block;
 	width: 50%;
@@ -4816,7 +4816,7 @@ figure:hover img {
 	-moz-transition: all .3s ease;
 }
 .portfolio-short-description-bg:hover figure {
-	background: rgba(0, 0, 0, 1);
+	background: rgba(21, 44, 64, 1);
 }
 
 /* ===================================
@@ -7478,7 +7478,7 @@ thead th.first {
 
 /* corporate */
 .onepage-corporate-slider h1 {
-	font-size: 85px;
+	font-size: 50px;
 	font-weight: 600;
 	letter-spacing: -2px;
 	text-transform: lowercase;
@@ -8090,7 +8090,7 @@ thead th.first {
 	font-size: 10px;
 	font-weight: 600;
 	letter-spacing: 2px;
-	background: #e75e50;
+	background: #41a0da;
 }
 .highlight-link:hover {
 	background: #152c40;

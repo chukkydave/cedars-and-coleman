@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <!-- responsive -->
     <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://kit.fontawesome.com/1981309840.js" crossorigin="anonymous"></script>
     <!--[if IE]>
             <link rel="stylesheet" href="css/style-ie.css" />
         <![endif]-->
@@ -50,47 +51,83 @@
         body {
             font-family: 'acumin-pro', 'poppins' !important;
         }
+
+        .has-error {
+            border: 1px solid red
+        }
     </style>
 </head>
 
 <body>
-    <!-- navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top nav-transparent overlay-nav sticky-nav nav-white nav-border-bottom no-transition"
+
+    <nav class="navbar navbar-default navbar-fixed-top nav-transparent overlay-nav nav-white sticky-nav nav-border-bottom"
         role="navigation">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-6"><a class="logo-light" href="index.html"><img alt=""
+                <!-- logo -->
+                <div class="col-md-2 pull-left"><a class="logo-light" href="index.html"><img alt=""
                             src="images/cedar-white2.png" class="logo" /></a><a class="logo-dark" href="index.html"><img
                             alt="" src="images/cedar-blue2.png" class="logo" /></a></div>
-                <div class="navbar-header">
+                <!-- end logo -->
+                <!-- search and cart  -->
+                <div class="col-md-2 no-padding-left search-cart-header pull-right">
+
+                    <div class="top-cart">
+                        <!-- nav shopping bag -->
+                        <a href="#" class="shopping-cart">
+                            <i class="fas fa-globe" style="font-size:1.5em; color:white;"></i>
+                            <!-- <div class="subtitle">(1) Items</div> -->
+                        </a>
+                        <!-- end nav shopping bag -->
+                        <!-- shopping bag content -->
+                        <div class="cart-content">
+                            <!-- <p class="buttons">
+                                <a href="shop-cart.html"
+                                    class="btn btn-very-small-white no-margin-bottom margin-seven pull-left no-margin-lr">English</a>
+                                <a href="shop-checkout.html"
+                                    class="btn btn-very-small-white no-margin-bottom margin-seven no-margin-right pull-right">Chinese</a>
+                            </p> -->
+                            <div id="google_translate_element"></div>
+                        </div>
+                        <!-- end shopping bag content -->
+                    </div>
+                </div>
+                <!-- end search and cart  -->
+                <!-- toggle navigation -->
+                <div class="navbar-header col-sm-8 col-xs-2 pull-right">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
                             class="icon-bar"></span> <span class="icon-bar"></span> </button>
                 </div>
-                <div class="col-md-9 text-right">
+                <!-- toggle navigation end -->
+                <!-- main menu -->
+                <div class="col-md-8 no-padding-right accordion-menu text-right">
                     <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
+                        <ul id="accordion" class="nav navbar-nav navbar-right panel-group">
                             <li><a href="#slider" class="inner-link">Home</a> </li>
                             <li><a href="#about" class="inner-link">About</a> </li>
-                            <li><a href="#objectives" class="inner-link">Objectives</a> </li>
                             <li><a href="#values" class="inner-link">Values</a> </li>
                             <li><a href="#services" class="inner-link">Services</a></li>
                             <li><a href="#key-person" class="inner-link">Team</a></li>
+                            <li><a href="#footer" class="inner-link">Contact</a> </li>
 
-                            <li><a href="#contact-us" class="inner-link">Contact</a> </li>
                         </ul>
+
                     </div>
                 </div>
+                <!-- end main menu -->
             </div>
         </div>
     </nav>
+    <!-- navigation -->
+
     <!-- end of navigation -->
     <!-- slider section -->
     <section id="slider"
         class="full-screen no-padding dark-pagination-without-next-prev-arrow onepage-corporate-slider">
         <div id="owl-demo" class="owl-carousel owl-theme light-pagination">
             <!-- slider item -->
-            <div class="item owl-bg-img" style="background-image:url('images/onepage-corporate-slider1.jpg');">
+            <div class="item owl-bg-img" style="background-image:url('images/slider12.jpg');">
                 <div class="slider-overlay bg-slider"></div>
                 <div class="container full-screen position-relative">
                     <div class="slider-typography">
@@ -103,8 +140,8 @@
                                 <p class="text-large light-gray-text letter-spacing-3 margin-three"
                                     style="font-stretch: semi-condensed; font-weight: bold;">The Growth Company
                                 </p>
-                                <a class="btn-small-white-background btn btn-small no-margin" href="#contact-us">work
-                                    with us</a>
+                                <a class="btn-small-white-background btn btn-small no-margin" href="#about">Learn
+                                    more</a>
                             </div>
                         </div>
                     </div>
@@ -112,21 +149,21 @@
             </div>
             <!-- end slider item -->
             <!-- slider item -->
-            <div class="item owl-bg-img" style="background-image:url('images/onepage-corporate-slider2.jpg');">
+            <div class="item owl-bg-img" style="background-image:url('images/slider2.jpg');">
                 <div class="slider-overlay bg-slider"></div>
                 <div class="container full-screen position-relative">
                     <div class="slider-typography">
                         <div class="slider-text-middle-main">
                             <div class="slider-text-middle">
                                 <h1 class="white-text"
-                                    style="text-transform: none; font-family: 'acumin-pro', poppins !important;">Cedars
-                                    and
-                                    Coleman</h1>
+                                    style="text-transform: none; font-family: 'acumin-pro', poppins !important;">Purpose
+                                </h1>
                                 <p class="text-large light-gray-text letter-spacing-3 margin-three"
-                                    style="font-stretch: semi-condensed; font-weight: bold;">The Growth Company
+                                    style="font-stretch: semi-condensed; font-weight: bold; color: whitesmoke !important;">
+                                    The Growth Company
                                 </p>
-                                <a class="btn-small-white-background btn btn-small no-margin" href="#contact-us">work
-                                    with us</a>
+                                <a class="btn-small-white-background btn btn-small no-margin" href="#about">Learn
+                                    more</a>
                             </div>
                         </div>
                     </div>
@@ -134,21 +171,21 @@
             </div>
             <!-- end slider item -->
             <!-- slider item -->
-            <div class="item owl-bg-img" style="background-image:url('images/onepage-corporate-slider3.jpg');">
+            <div class="item owl-bg-img" style="background-image:url('images/slider3.jpg');">
                 <div class="slider-overlay bg-slider"></div>
                 <div class="container full-screen position-relative">
                     <div class="slider-typography">
                         <div class="slider-text-middle-main">
                             <div class="slider-text-middle">
                                 <h1 class="white-text"
-                                    style="text-transform: none; font-family: 'acumin-pro', poppins !important;">Cedars
-                                    and
-                                    Coleman</h1>
+                                    style="text-transform: none; font-family: 'acumin-pro', poppins !important;">
+                                    Leadership</h1>
                                 <p class="text-large light-gray-text letter-spacing-3 margin-three"
-                                    style="font-stretch: semi-condensed; font-weight: bold;">The Growth Company
+                                    style="font-stretch: semi-condensed; font-weight: bold; color: whitesmoke !important;">
+                                    The Growth Company
                                 </p>
-                                <a class="btn-small-white-background btn btn-small no-margin" href="#contact-us">work
-                                    with us</a>
+                                <a class="btn-small-white-background btn btn-small no-margin" href="#about">Learn
+                                    more</a>
                             </div>
                         </div>
                     </div>
@@ -163,8 +200,8 @@
             <div class="row">
                 <div class="col-md-5">
                     <!-- <span class="text-large display-block">Capacity to see beauty</span> -->
-                    <span class="title-large text-uppercase letter-spacing-1 font-weight-600 black-text">Who we
-                        are</span>
+                    <span class="title-large text-uppercase letter-spacing-1 font-weight-600 black-text">We Support Your
+                        Business Growth Plans</span>
                     <div class="separator-line-thick no-margin-lr" style="background: #41a0da;"></div>
                     <p class="no-margin-bottom">Cedars and Coleman is a business development company focused on
                         supporting companies and institutions in driving their
@@ -179,33 +216,29 @@
                     <!-- <a class="highlight-button-black-border btn btn-small no-margin-bottom inner-link sm-margin-bottom-ten"
                         href="#">Read More</a> -->
                 </div>
-                <div class="col-md-3 col-sm-6 text-center col-md-offset-1 xs-margin-bottom-ten"><img
-                        src="images/leader3.jpg" class="xs-img-full" alt="" /></div>
-                <div class="col-md-3 col-sm-6 text-center "><img src="images/leader4.jpg" class="xs-img-full" alt="" />
-                </div>
+                <div class="col-md-6 col-sm-6 text-center col-md-offset-1 xs-margin-bottom-ten"><img
+                        src="images/who-we-are.jpg" class="xs-img-full" alt="" /></div>
+                <!-- <div class="col-md-3 col-sm-6 text-center "><img src="images/leader4.jpg" class="xs-img-full" alt="" />
+                </div> -->
             </div>
         </div>
     </section>
-    <section class="padding-three">
+    <section class="bg-gray no-padding-bottom">
         <div class="container">
             <div class="row">
-                <!-- section title -->
-                <div class="col-md-6 col-sm-6 xs-margin-bottom-four">
-                    <span class="text-large letter-spacing-2 black-text font-weight-600 text-uppercase agency-title"
-                        style="border-left:4px solid #41a0da;">Our
-                        Purpose</span>
+                <div class="col-md-6 col-sm-10 text-center center-col">
+                    <!-- <span class="margin-five no-margin-top display-block letter-spacing-2">EST. 2011</span> -->
+                    <h1>Our Purpose</h1>
+                    <p class="text-med width-90 center-col margin-seven"><b> Unlocking the growth
+                            potentials of African businesses through multi-layer support structures to create an
+                            economically
+                            viable continent.</b></p>
                 </div>
-                <!-- end section title -->
-                <!-- section highlight text -->
-                <div class="col-md-6 col-sm-6 text-right xs-text-left">
-                    <span class="text-extra-large font-weight-400">Unlocking the growth potentials of African businesses
-                        through multi-layer support structures to create an economically
-                        viable continent.</span>
-                </div>
-                <!-- end section highlight text -->
             </div>
         </div>
+
     </section>
+
 
     <section class="bg-fast-yellow" style="background: #41a0da !important; padding: 50px;">
         <div class="container">
@@ -217,17 +250,15 @@
         </div>
     </section>
 
-    <section style="padding: 120px 0 0 0;" id="objectives">
+    <!-- <section style="padding: 120px 0 0 0;" id="objectives">
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <!-- <span class="text-large display-block">Capacity to see beauty</span> -->
                     <span class="title-large text-uppercase letter-spacing-1 font-weight-600 black-text">Our
                         Objective</span>
                     <div class="separator-line-thick no-margin-lr" style="background: #41a0da;"></div>
 
-                    <!-- <a class="highlight-button-black-border btn btn-small no-margin-bottom inner-link sm-margin-bottom-ten"
-                            href="#">Read More</a> -->
+                    
                 </div>
 
             </div>
@@ -270,7 +301,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <section style="padding: 120px 0 0 0;" id="values">
         <div class="container">
             <div class="row">
@@ -311,12 +342,10 @@
                                         <a href="#portfolio" class="inner-link">Professionalism</a>
                                     </p>
 
-                                    <p class="width-80">It is our duty to perform the highest standard of
-                                        professionalism as dictated by the local and international
-                                        professional code of ethics and regulatory bodies. We therefore, invest in the
-                                        staff that has the relevant academic and
-                                        professional qualifications, knowledge, and experience in all areas of our
-                                        services.</p>
+                                    <p class="width-80">We are committed to the highest standards of professionalism in
+                                        line with local and international best practices and
+                                        regulations. We therefore invest in our people as our most critical resource in
+                                        delivering best-in-class services.</p>
 
                                 </div>
                             </div>
@@ -340,9 +369,9 @@
                                     </p>
 
                                     <p class="width-80">We are committed to excellence in the services we provide and
-                                        also in the results we attain for our clients. We achieve
-                                        the highest quality of service delivery by attracting, developing, and retaining
-                                        the best professionals and investing in
+                                        the results we achieve for our clients. We offer the
+                                        highest quality of service delivery by attracting, developing and retaining the
+                                        best professionals while investing in
                                         the latest technology.</p>
 
                                 </div>
@@ -377,7 +406,56 @@
 
             </div>
 
-            <div class="col-md-6 bg-light-gray padding-five box-min-height sm-display-table xs-display-inherit xs-text-center cover-background xs-onepage-section"
+            <div class="row">
+                <!-- features item -->
+                <div class="col-md-3 col-sm-6 sm-margin-bottom-ten xs-text-center">
+                    <span
+                        class="title-small text-uppercase font-weight-700 black-text letter-spacing-1 margin-seven display-block">Business<br>
+                        Consulting</span>
+                    <p class="margin-ten no-margin-top width-90 xs-center-col xs-display-block">Our experienced team of
+                        business consulting professionals can support you through the often challenging path to business
+                        growth.</p>
+                    <a href="buisness-consulting.html" class="highlight-link text-uppercase white-text">Read More <i
+                            class="fa fa-long-arrow-right extra-small-icon white-text"></i></a>
+                </div>
+                <!-- end features item -->
+                <!-- features item -->
+                <div class="col-md-3 col-sm-6 sm-margin-bottom-ten xs-text-center">
+                    <span
+                        class="title-small text-uppercase font-weight-700 black-text letter-spacing-1 margin-seven display-block">TRADE<br>
+                        FACILITATION </span>
+                    <p class="margin-ten no-margin-top width-90 xs-center-col xs-display-block">Cross-border trade has
+                        become more pervasive arising from globalization and digitization.</p><br>
+                    <a href="trade-facilitation.html" class="highlight-link text-uppercase white-text">Read More <i
+                            class="fa fa-long-arrow-right extra-small-icon white-text"></i></a>
+                </div>
+                <!-- end features item -->
+                <!-- features item -->
+                <div class="col-md-3 col-sm-6 xs-margin-bottom-ten xs-text-center">
+                    <span
+                        class="title-small text-uppercase font-weight-700 black-text letter-spacing-1 margin-seven display-block">FINANCING/<br>ADVISORY</span>
+                    <p class="margin-ten no-margin-top width-90 xs-center-col xs-display-block">Business growth is often
+                        constrained by lack of access to financing or mis-match between funding type/structure and
+                        business dynamics.</p>
+                    <a href="advisory.html" class="highlight-link text-uppercase white-text">Read More <i
+                            class="fa fa-long-arrow-right extra-small-icon white-text"></i></a>
+                </div>
+                <!-- end features item -->
+                <!-- features item -->
+                <div class="col-md-3 col-sm-6 xs-text-center">
+                    <span
+                        class="title-small text-uppercase font-weight-700 black-text letter-spacing-1 margin-seven display-block">LEADERSHIP
+                        DEVELOPMENT</span>
+                    <p class="margin-ten no-margin-top width-90 xs-center-col xs-display-block">Our leadership
+                        development programs are designed to solve your organization’s critical leadership challenges.
+                    </p>
+                    <a href="leadership.html" class="highlight-link text-uppercase white-text">Read More <i
+                            class="fa fa-long-arrow-right extra-small-icon white-text"></i></a>
+                </div>
+                <!-- end features item -->
+            </div>
+
+            <!-- <div class="col-md-6 bg-light-gray padding-five box-min-height sm-display-table xs-display-inherit xs-text-center cover-background xs-onepage-section"
                 style="background-image:url('images/para.jpg');">
 
             </div>
@@ -438,7 +516,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <section id="key-person" class="animate slow-mo even fadeIn" data-anim-type="fadeIn" data-anim-delay="200"
@@ -459,7 +537,7 @@
                 <!-- team member -->
                 <div class="col-md-3 col-xs-12 col-sm-12 bottom-margin text-center">
                     <div class="key-person">
-                        <div class="key-person-img"><img src="images/Ben2.jpg" alt=""></div>
+                        <div class="key-person-img"><img src="images/ben4.jpg" alt=""></div>
                         <div class="key-person-details"> <span class="person-name black-text">Benjamin Dike, PhD</span>
                             <span class="person-post">Managing Director</span>
                             <div class="separator-line" style="background: #41a0da !important"></div>
@@ -651,137 +729,34 @@
                     <p class="title-large text-uppercase letter-spacing-1 white-text font-weight-600">Let's work
                         together on
                         your next project</p>
-                    <a class="btn-small-white btn btn-medium inner-link" href="#contact-us">Request a free quote</a>
+                    <a class="btn-small-white btn btn-medium inner-link" href="service-request.html">Request Service</a>
                 </div>
             </div>
         </div>
     </section>
-
-
-    <section style="padding: 120px 0 0 0;" id="contact-us" class="bg-gray">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5">
-                    <!-- <span class="text-large display-block">Capacity to see beauty</span> -->
-                    <span class="title-large text-uppercase letter-spacing-1 font-weight-600 black-text">Request
-                        Form</span>
-                    <div class="separator-line-thick no-margin-lr" style="background: #41a0da;"></div>
-
-                    <!-- <a class="highlight-button-black-border btn btn-small no-margin-bottom inner-link sm-margin-bottom-ten"
-                                            href="#">Read More</a> -->
-                </div>
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-5 col-sm-8 col-xs-11 center-col xs-no-padding">
-
-                    <form>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Name</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <input type="text" name="name" id="name" class="input-round big-input">
-                            <!-- end input  -->
-                        </div>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Designation</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <input type="text" name="designation" id="designation" class="input-round big-input">
-                            <!-- end input  -->
-                        </div>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Business Email</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <input type="text" name="businessEmail" id="businessEmail" class="input-round big-input">
-                            <!-- end input  -->
-                        </div>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Business Location/Address</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <input type="text" name="businessLocation" id="businessLocation"
-                                class="input-round big-input">
-                            <!-- end input  -->
-                        </div>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Business Industry</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <input type="text" name="businessIndustry" id="businessIndustry"
-                                class="input-round big-input">
-                            <!-- end input  -->
-                        </div>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Business Phone No</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <input type="text" name="businessPhone" id="businessPhone" class="input-round big-input">
-                            <!-- end input  -->
-                        </div>
-
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Which of our services are you interested in?</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <select name="service" id="service" class="input-round big-input">
-                                <option></option>
-                            </select>
-                            <!-- end input  -->
-                        </div>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Please include any attachments (e.g., logo, mission statement,
-                                annual report, etc.)
-                                that would help us better
-                                understand your company's needs.</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <input type="file" name="logo" id="logo" class="input-round big-input">
-                            <!-- end input  -->
-                        </div>
-                        <div class="form-group no-margin-bottom">
-                            <!-- label  -->
-                            <label class="text-uppercase">Additional Information/Comments</label>
-                            <!-- end label  -->
-                            <!-- input  -->
-                            <textarea type="text" name="addInfo" id="addInfo" class="input-round big-input"></textarea>
-                            <!-- end input  -->
-                        </div>
-                        <button class="btn highlight-button-dark btn-small btn-round margin-five no-margin-right"
-                            type="submit">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
 
     <!-- footer -->
-    <footer>
+    <footer id="footer">
         <div class=" bg-white footer-top">
             <div class="container">
                 <div class="row margin-four">
                     <!-- phone -->
                     <div class="col-md-4 col-sm-4 text-center"><i class="icon-phone small-icon black-text"></i>
                         <h6 class="black-text margin-two no-margin-bottom">+234-816-3904-712</h6>
+                        <h6 class="black-text margin-two no-margin-bottom">+234-905-5467-733</h6>
                     </div>
                     <!-- end phone -->
                     <!-- address -->
                     <div class="col-md-4 col-sm-4 text-center"><i class="icon-map-pin small-icon black-text"></i>
-                        <h6 class="black-text margin-two no-margin-bottom">Plot 30B, Road 11, Ikota Villa Estate, Ikota,
+                        <h6 class="black-text margin-two no-margin-bottom"><b>Nigeria: </b> Plot 30B, Road 11, Ikota
+                            Villa
+                            Estate, Ikota,
                             LEKKI - Lagos.</h6>
+                        <h6 class="black-text margin-two no-margin-bottom"><b>China: </b> #403, Alibaba Cloud BMW
+                            Startup
+                            Garage,
+                            No.1348 New Jinqiao Road, Pudong, Shanghai</h6>
                     </div>
                     <!-- end address -->
                     <!-- email -->
@@ -789,7 +764,7 @@
 
                     <div class="col-md-4 col-sm-4 text-center"><i class="icon-envelope small-icon black-text"></i>
                         <h6 class="margin-two no-margin-bottom"><a href="mailto:cedarsandcoleman@gmail.com"
-                                class="black-text">cedarsandcoleman@gmail.com</a></h6>
+                                class="black-text">enquiry@cedarsandcoleman.com</a></h6>
                     </div>
                     <!-- end email -->
                 </div>
@@ -861,80 +836,119 @@
     <!-- setting -->
     <script type="text/javascript" src="js/main.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- <script type="text/javascript">
-        $("#contact-us-button").click(function () {
-            var ck_email = "/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i";
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-            if ($("#name").val() == "") {
+    <script>
+        $(document).ready(() => {
+            let buisness = '<label class="text-uppercase"><span style="color: red;">*</span> Kindly specify a sub - service</label><br><input name="sub-service" type="radio" value="Business process and structures" class="input-round subby big-input"><label class="text-uppercase"> Business process and structures</label> <br><input name="sub-service" type="radio" class="input-round subby big-input" value="Business coaching and leadership transition"><label class="text-uppercase">Business coaching and leadership transition</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Advisory"><label class="text-uppercase">Advisory</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Business & digital transformation"><label class="text-uppercase">Business & digital transformation</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Executive Directorship Programme"><label class="text-uppercase">Executive Directorship Programme</label>'
+            let advisory = '<label class="text-uppercase"><span style="color: red;">*</span> Kindly specify a sub - service</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Funding arrangements"><label class="text-uppercase">  Funding arrangements</label> <br><input name="sub-service" type="radio" class="input-round subby big-input" value="Equity and Debt"><label class="text-uppercase">Equity and Debt</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Business transitions"><label class="text-uppercase">Business transitions</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="M & A"><label class="text-uppercase">M & A</label>'
+            let leadership = '<label class="text-uppercase"><span style="color: red;">*</span> Kindly specify a sub - service</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Leadership coaching for business leaders and professionals"><label class="text-uppercase"> Leadership coaching for business leaders and professionals</label> <br><input name="sub-service" type="radio" class="input-round subby big-input" value="Trainings"><label class="text-uppercase"> Trainings</label>'
+            let trade = '<label class="text-uppercase"><span style="color: red;">*</span> Kindly specify a sub - service</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Cross-border client identification and due diligence"><label class="text-uppercase">Cross-border client identification and due diligence</label> <br><input name="sub-service" type="radio" class="input-round subby big-input" value="Franchising and agency arrangements"><label class="text-uppercase">Franchising and agency arrangements</label><br><input name="sub-service" type="radio" class="input-round subby big-input" value="Cross - border studies and business set - up support"><label class="text-uppercase">Cross - border studies and business set - up support</label>'
+            $('#service').val(localStorage.getItem('service'))
+            setTimeout(() => {
+                if ($('#service').val() === 'Leadership Development') {
+                    $('#subby').html(leadership)
+                }
+                if ($('#service').val() === 'Financing/Advisory') {
+                    $('#subby').html(advisory)
+                }
+                if ($('#service').val() === 'Buisness Consulting') {
+                    $('#subby').html(buisness)
+                }
+                if ($('#service').val() === 'Trade Facilitation') {
+                    $('#subby').html(trade)
+                }
+                if ($('#service').val() === '') {
+                    $('#subby').html('')
+                }
+            }, 2000);
+            $(document).on('change', '#service', () => {
 
-                alert("Please enter name");
-            }
-            else if (ck_email.match($("#email").val()) == false) {
 
-                alert("Invalid email format");
-            }
+                if ($('#service').val() === 'Leadership Development') {
+                    $('#subby').html(leadership)
+                }
+                if ($('#service').val() === 'Financing/Advisory') {
+                    $('#subby').html(advisory)
+                }
+                if ($('#service').val() === 'Buisness Consulting') {
+                    $('#subby').html(buisness)
+                }
+                if ($('#service').val() === 'Trade Facilitation') {
+                    $('#subby').html(trade)
+                }
+                if ($('#service').val() === '') {
+                    $('#subby').html('')
+                }
 
+            })
 
-            else {
-                $('#contact-us-button').hide()
-                $('#contact-loader').show()
+            $('#send_me').on('click', () => {
+                if (isEmptyInput('.add_corres_fields')) {
+                    gatherData();
+                }
+            })
 
-                var dataString = 'email=' + $("#email").val() + '&name=' + $("#name").val();
-                $.ajax
-                    ({
-                        type: "GET",
-                        url: "mail.php",
-                        data: dataString,
-                        cache: false,
-                        dataType: "json",
-                        success: function (msg) {
-                            if (msg == "successful") {
-                                $('#contact-loader').hide()
-                                $('#contact-us-button').show()
-                                // alert("Thank you for contacting us");
-                                Swal.fire({
-                                    title: 'Success',
-                                    text: `Thank you for contacting us`,
-                                    icon: 'success',
-                                    confirmButtonText: 'Okay',
-                                    // onClose: window.location.reload(),
-                                    // onClose: onCLose(),
-                                });
-                                $("#email").val('');
-                                $("#name").val('');
-                                // $("#message").val('')
-                            }
-                            else if (msg == "error") {
-                                $('#contact-loader').hide()
-                                $('#contact-us-button').show()
-                                // alert("Unable to send mail");
-                                Swal.fire({
-                                    title: 'Error!',
-                                    text: `Unable to send mail`,
-                                    icon: 'error',
-                                    confirmButtonText: 'Close',
-                                });
-                            }
-                            else {
-                                $('#contact-loader').hide()
-                                $('#contact-us-button').show()
-                                // alert("Technical error");
-                                Swal.fire({
-                                    title: 'Error!',
-                                    text: `Technical error`,
-                                    icon: 'error',
-                                    confirmButtonText: 'Close',
-                                });
-                            }
-
-                        }
-                    });
-
-            }
-
+            var owl = $(".owl-carousel");
+            owl.owlCarousel({
+                items: 1,
+                autoplay: true,
+                autoPlaySpeed: 5000,
+                autoPlayTimeout: 5000,
+                autoplayHoverPause: true
+            });
         })
 
-    </script> -->
+        function gatherData() {
+
+            let name = $('#name').val()
+            let designation = $('#designation').val()
+            let buisEmail = $('#businessEmail').val()
+            let buisLocation = $('#businessLocation').val()
+            let buisIndustry = $('#businessIndustry').val()
+            let phone = $('#businessPhone').val()
+            let service = $('#service').val()
+            let file = 'files'
+            let addInfo = $('#addInfo').val();
+            let sub_serv = ''
+            var ele = document.getElementsByName('sub-service');
+
+            for (i = 0; i < ele.length; i++) {
+                if (ele[i].checked)
+                    sub_serv = ele[i].value;
+            }
+            console.log({
+                name: name, designation: designation, buisEmail: buisEmail, buisLocation: buisLocation, buisIndustry: buisIndustry, phone: phone, service: service, file: file, addInfo: addInfo, sub_serv: sub_serv
+            })
+        }
+
+        function isEmptyInput(first) {
+            let isEmpty = false;
+            $(first).each(function () {
+                var input = $.trim($(this).val());
+                if (input.length === 0 || input === '0') {
+                    $(this).addClass('has-error');
+                    isEmpty = true;
+                } else {
+                    $(this).removeClass('has-error');
+                    // isEmpty = false;
+                }
+            });
+            if (isEmpty === true) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+
+    </script>
 </body>
 
 

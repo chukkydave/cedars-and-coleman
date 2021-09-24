@@ -235,6 +235,10 @@ $(document).ready(function() {
 		paginationSpeed: 400,
 		singleItem: true,
 		transitionStyle: 'fade',
+		autoplay: true,
+		autoPlaySpeed: 5000,
+		autoPlayTimeout: 5000,
+		autoplayHoverPause: true,
 		navigationText: [
 			"<i class='fa fa-angle-left'></i>",
 			"<i class='fa fa-angle-right'></i>",
